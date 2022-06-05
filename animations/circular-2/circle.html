@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="chart" data-percent="90" >90%</div>
+      <h2>HTML</h2>
+    </div>
+    <div class="box">
+      <div class="chart" data-percent="72" >72%</div>
+      <h2>CSS</h2>
+    </div>
+    <div class="box">
+      <div class="chart" data-percent="81" >81%</div>
+      <h2>JAVASCRIPT</h2>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+    $(function() {
+  $('.chart').easyPieChart({
+    size: 180,
+    barColor: "#36e617",
+    scaleLength: 0,
+    lineWidth: 15,
+    trackColor: "#525151",
+    lineCap: "circle",
+    animate: 2000,
+  });
+});
+  </script>
+</body>
+</html>
