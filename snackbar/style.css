@@ -1,0 +1,25 @@
+#snackbar {
+  visibility: hidden;
+  position: fixed;
+  right: 0;
+  bottom: 30px;
+  background-color: red;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30; opacity: 1;}
+  to {bottom: 0px; opacity: 0;}
+}
