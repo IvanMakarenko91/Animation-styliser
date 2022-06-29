@@ -30,12 +30,15 @@ section {
 }
 #home {
   background-color: royalblue;
+  min-height: 75vh;
 }
 #about {
   background-color: aquamarine;
+  min-height: 100vh;
 }
 #footer {
   background-color: crimson;
+  min-height: 125vh;
 }
 nav {
   position: sticky;
@@ -95,14 +98,14 @@ nav .container ul li.active a {
   <script>
     const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll("nav .container ul li");
-window.addEventListener("scroll", () => {
-  let current = "";
+
+window.onscroll = () => {
+  var current = "";
+
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
-      current = section.getAttribute("id");
-    }
+    if (pageYOffset >= sectionTop - 1 ) {
+      current = section.getAttribute("id"); }
   });
 
   navLi.forEach((li) => {
@@ -111,7 +114,7 @@ window.addEventListener("scroll", () => {
       li.classList.add("active");
     }
   });
-});
+};
   </script>
 </body>
 </html>
