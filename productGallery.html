@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .product-small-img img {
+      height: 150px;
+      width: 150px;
+      margin: 10px 0;
+      cursor: pointer;
+      display: block;
+      opacity: 0.6;
+    }
+    .product-small-img img:hover {
+      opacity: 1;
+    }
+
+    .product {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+    .img-container img {
+      height: 500px;
+      width: 500px;
+    }
+
+    .product-small-img {
+      float: left;
+    }
+    .img-container {
+      float: right;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <div class="product">
+    <div class="product-small-img">
+      <img src="./animations/bookcover.html/book.jpg" alt="" onclick="myFunction(this)">
+      <img src="./animations/bookcover.html/page.jpg" alt="" onclick="myFunction(this)">
+      <img src="./animations/Drop-down-menu/football1.jpg" alt="" onclick="myFunction(this)">
+      <img src="./animations/Drop-down-menu/football2.jpg" alt="" onclick="myFunction(this)">
+    </div>
+    <div class="img-container">
+      <img src="./animations/Drop-down-menu/football3.jpg" alt="" id="image-box">
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function myFunction(smallImg) {
+      var fullImg = document.getElementById("image-box");
+      fullImg.src = smallImg.src
+    }
+  </script>
+</body>
+</html>

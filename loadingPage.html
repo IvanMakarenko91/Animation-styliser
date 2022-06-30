@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 0 .75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+    </style>
+</head>
+<body>
+
+  <div class="loader"></div>
+  <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus fugiat debitis dignissimos quos nihil. Dignissimos dicta nemo facilis quidem vel? In a quod cum eaque quas minima illum quaerat saepe quia veritatis voluptas, non, rem similique! Alias, facilis autem consectetur pariatur debitis reprehenderit nostrum magnam iusto minus? Aperiam sapiente ut, quam animi commodi tempore modi dolor accusantium reiciendis. Quia hic omnis fugiat, maiores ab officiis, id modi quaerat facilis nam tempore. Quaerat, sint quis. Velit deserunt ipsa, dolore corrupti iste dignissimos sit deleniti tenetur nihil maxime magnam? Quam, aliquid! Sequi mollitia ducimus impedit. Error aspernatur natus laborum explicabo beatae? Omnis, beatae. Aliquam quisquam modi, reprehenderit cumque eveniet voluptatibus? Itaque eveniet velit eum veritatis expedita, delectus, laboriosam nostrum provident eos repellendus reprehenderit vitae perferendis praesentium voluptatem, hic est. Rerum vitae tempore impedit pariatur, modi repellat fugit ex facere optio earum inventore atque expedita quam, nobis libero saepe tempora at molestiae harum labore dolor est sapiente delectus. Magni, quae suscipit. Enim, ea. Qui nisi perspiciatis, praesentium repudiandae minima veritatis nihil fugiat eos, illo blanditiis quisquam possimus, repellat rerum impedit delectus! Et facilis laudantium labore vitae unde pariatur, consequuntur natus. Officiis similique tempora minus iste facere eum quo nobis repudiandae fugiat vero eligendi nisi, ullam corporis, exercitationem recusandae blanditiis corrupti repellendus ipsum doloremque maiores suscipit consequatur. Natus esse rem quasi illo repellat laborum quos quae totam facilis aspernatur obcaecati maiores, nesciunt, earum eos cum voluptate eligendi. Maxime repellat quibusdam iste accusantium vitae excepturi, fuga, iure aspernatur fugiat fugit quidem beatae vero ratione at quam in soluta! A dolor, inventore dolorum quod, dolores quo explicabo quas voluptatibus consectetur molestiae est culpa nostrum minima dolore autem quos ex ad corporis maxime quam nulla eligendi cum! Inventore sequi ad quo omnis, nobis ab quod? Sequi dolore molestias nam eaque soluta labore exercitationem facere voluptas corrupti. Magnam laboriosam obcaecati, inventore commodi pariatur deserunt? Tempora itaque accusantium nostrum quasi quidem ad suscipit dolorem ducimus consectetur, alias eos commodi similique, maiores consequatur voluptate? Consectetur provident neque commodi dolores quisquam quam in, quod soluta, a nesciunt similique quaerat beatae cumque expedita incidunt maxime tenetur ipsam tempora voluptatem amet distinctio veritatis, enim iure blanditiis! Asperiores assumenda atque corporis nemo rerum incidunt praesentium vitae alias qui odio harum veritatis deleniti, illo temporibus voluptatem. Ad modi beatae cupiditate corrupti voluptatum neque deserunt qui! In asperiores ab excepturi, quae aliquam est suscipit? Illum delectus, maiores facere eos labore facilis, similique ex dolores excepturi porro vero asperiores omnis accusantium. Obcaecati reprehenderit necessitatibus ipsa nemo nesciunt, minima fuga dolore porro quaerat amet labore reiciendis quas, repudiandae commodi dolores. Maxime labore tempore, soluta dignissimos suscipit dolorum magni quibusdam possimus provident obcaecati laudantium? Vitae hic iusto itaque labore libero excepturi modi exercitationem voluptates ipsam ratione corrupti, maxime, nam tempore repellat officiis ducimus similique aperiam error, laudantium unde amet. Ipsa sapiente maxime recusandae. Amet perspiciatis ducimus eum soluta, dolore accusantium eos atque enim sequi sit. Molestiae dolorem totam explicabo iste soluta expedita modi dolore quas repudiandae similique qui quasi excepturi enim, itaque iure culpa accusamus vitae iusto quae aut.</div>
+
+    <script type="text/javascript">
+      window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
+    </script>
+</body>
+</html>
