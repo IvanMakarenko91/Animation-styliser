@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .slider {
+      height: 50vh;
+      position: relative;
+    }
+
+    .slider img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+
+    .suivant, .precedent {
+      color: white;
+      position: absolute;
+      font-size: 3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .suivant {
+      right: 1rem;
+    }
+
+    .precedent {
+      left: 1rem;
+    }
+  </style>
+
+</head>
+
+
+
+
+<body>
+  
+<div class="slider">
+  <img src="/animations/Drop-down-menu/football1.jpg" alt="img1" class="img__slider active">
+  <img src="/animations/Drop-down-menu/football2.jpg" alt="img2" class="img__slider">
+  <img src="/animations/Drop-down-menu/football3.jpg" alt="img3" class="img__slider">
+  <div class="suivant">
+    <i class="fa-solid fa-circle-chevron-right"></i>
+  </div>
+  <div class="precedent">
+    <i class="fa-solid fa-circle-chevron-left"></i>
+  </div>
+</div>
+
+
+
+<script src="slider.js"></script>
+</body>
+</html>

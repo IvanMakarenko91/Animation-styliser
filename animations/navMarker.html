@@ -14,6 +14,10 @@
             body {
                 font-family: Open Sans, sans-serif;
             }
+
+            html {
+              scroll-behavior: smooth;
+            }
             
             nav {
                 position: fixed;
@@ -39,7 +43,7 @@
             }
             
             section {
-                padding: 30% 0;
+                min-height: 100vh;
                 text-align: center;
             }
             
@@ -48,6 +52,25 @@
             section.gallery { background-color: #aaa; }
             section.testimonials { background-color: #bbb; }
             section.contact { background-color: #ccc; }
+
+            @media (max-width:1000px) {
+              body {
+                position: relative;
+              }
+              nav {
+                position: absolute;
+                left: -100%;
+                transition: all 0.5s;
+              }
+
+              .nav-test {
+                left: 0%;
+              }
+
+              nav ul li {
+                display: block;
+              }
+            }
 
 
 		</style>
@@ -58,31 +81,31 @@
 		
         <nav>
             <ul>
-                <li><a href="#" class="about-marker active">About</a></li>
-                <li><a href="#" class="team-marker">Team</a></li>
-                <li><a href="#" class="gallery-marker">Gallery</a></li>
-                <li><a href="#" class="testimonials-marker">Testimonials</a></li>
-                <li><a href="#" class="contact-marker">Contact</a></li>
+                <li><a href="#about" class="about-marker active">About</a></li>
+                <li><a href="#team" class="team-marker">Team</a></li>
+                <li><a href="#gallery" class="gallery-marker">Gallery</a></li>
+                <li><a href="#testimonials" class="testimonials-marker">Testimonials</a></li>
+                <li><a href="#contact" class="contact-marker">Contact</a></li>
             </ul>
         </nav>
         
-        <section class="about">
+        <section class="about" id="about">
             <h1>About</h1>
         </section>
         
-        <section class="team">
+        <section class="team" id="team">
             <h1>Team</h1>
         </section>
         
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <h1>Gallery</h1>
         </section>
         
-        <section class="testimonials">
+        <section class="testimonials" id="testimonials">
             <h1>Testimonials</h1>
         </section>
         
-        <section class="contact">
+        <section class="contact" id="contact">
             <h1>Contact</h1>
         </section>
         

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Roboto:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  padding: 30px 20px;
+  background-color: beige;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.main-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  padding: 5px 10px;
+  border: none;
+  display: inline-block;
+  padding: 5px;
+  transition: all linear 0.5s;
+  margin-right: 20px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 5px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+section h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0.8;
+  color: white;
+  text-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.active {
+  background-color: goldenrod;
+  display: inline-block;
+  padding: 5px;
+}
+
+  </style>
+</head>
+
+
+
+<body>
+
+  <header>
+    <div class="contain">
+      <div class="main-head">
+        <img src="./images/logo.png" alt="">
+        <nav class="nav">
+          <ul>
+            <li class="links"><a href="#accueil">Accueil</a></li>
+            <li class="links"><a href="#services">Services</a></li>
+            <li class="links"><a href="#propos">À propos</a></li>
+            <li class="links"><a href="#pack">Pack</a></li>
+            <li class="links"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="accueil">
+    <h2>Accueil</h2>
+  </section>
+  <section id="services">
+    <h2>Services</h2>
+  </section>
+  <section id="propos">
+    <h2>À propos</h2>
+  </section>
+  <section id="pack">
+    <h2>Packs</h2>
+  </section>
+  <section id="contact">
+    <h2>Contacts</h2>
+  </section>
+  
+
+  <script>
+
+    const li = document.querySelectorAll('.links');
+    const sec = document.querySelectorAll('section');
+
+    function activeMenu() {
+      let len = sec.length;
+      while(--len && window.scrollY + 97 < sec[len].offsetTop);
+      li.forEach(ltx => ltx.classList.remove('active'));
+      li[len].classList.add('active');
+    }
+    activeMenu();
+    window.addEventListener('scroll', activeMenu)
+
+  </script>
+</body>
+</html>
